@@ -1,0 +1,6 @@
+pytest
+PyYAML
+pytest-tap
+xlsxwriter
+docutils
+boltons

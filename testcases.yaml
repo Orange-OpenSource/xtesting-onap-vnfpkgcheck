@@ -1,0 +1,90 @@
+---
+tiers:
+    -
+        name: onap_vnf_pkg
+        order: 1
+        description: ''
+        testcases:
+            -
+                case_name: fw
+                project_name: demo
+                criteria: 100
+                blocking: false
+                clean_flag: false
+                description: ''
+                run:
+                    name: 'bashfeature'
+                    args:
+                        cmd: 'pytest /src/valid_script/ice_validator/tests --cache-clear --runxfail --template-dir=/src/demo/heat/vFW'
+
+            -
+                case_name: cpe
+                project_name: demo
+                criteria: 100
+                blocking: false
+                clean_flag: false
+                description: ''
+                run:
+                    name: 'bashfeature'
+                    args:
+                        cmd: 'pytest /src/valid_script/ice_validator/tests --cache-clear --runxfail --template-dir=/src/demo/heat/vCPE'
+
+            -
+                case_name: lb
+                project_name: demo
+                criteria: 100
+                blocking: false
+                clean_flag: false
+                description: ''
+                run:
+                    name: 'bashfeature'
+                    args:
+                        cmd: 'pytest /src/valid_script/ice_validator/tests --cache-clear --runxfail --template-dir=/src/demo/heat/vLB'
+
+            -
+                case_name: fwcl
+                project_name: demo
+                criteria: 100
+                blocking: false
+                clean_flag: false
+                description: ''
+                run:
+                    name: 'bashfeature'
+                    args:
+                        cmd: 'pytest /src/valid_script/ice_validator/tests --cache-clear --runxfail --template-dir=/src/demo/heat/vFWCL'
+
+            -
+                case_name: lbms
+                project_name: demo
+                criteria: 100
+                blocking: false
+                clean_flag: false
+                description: ''
+                run:
+                    name: 'bashfeature'
+                    args:
+                        cmd: 'pytest /src/valid_script/ice_validator/tests --cache-clear --runxfail --template-dir=/src/demo/heat/vLBMS'
+
+            -
+                case_name: vg
+                project_name: demo
+                criteria: 100
+                blocking: false
+                clean_flag: false
+                description: ''
+                run:
+                    name: 'bashfeature'
+                    args:
+                        cmd: 'pytest /src/valid_script/ice_validator/tests --cache-clear --runxfail --template-dir=/src/demo/heat/vG'
+
+            -
+                case_name: onap
+                project_name: demo
+                criteria: 100
+                blocking: false
+                clean_flag: false
+                description: ''
+                run:
+                    name: 'bashfeature'
+                    args:
+                        cmd: 'pytest /src/valid_script/ice_validator/tests --cache-clear --runxfail --template-dir=/src/demo/heat/ONAP'
